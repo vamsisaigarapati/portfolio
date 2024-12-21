@@ -6,7 +6,7 @@
 **Email:** [vamsisaigarapati@gmail.com](mailto:vamsisaigarapati@gmail.com)  
 **Phone:** +1 716-541-7019  
 **LinkedIn:** [vamsi-sai-garapati](https://www.linkedin.com/in/vamsi-sai-garapati/)  
-
+**Github:** [vamsisaigarapati](https://github.com/vamsisaigarapati)  
 ---
 
 ## Summary
@@ -57,9 +57,9 @@ Seasoned Data Engineer with 4 years of experience designing and implementing rob
    - Developed a Streamlit app that connects to the pipeline and provides real-time predictions.
 
 **Links**:  
-- [Streamlit App](#)  
-- [GitHub Repository (FastAPI)](#)  
-- [GitHub Repository (Streamlit)](#)
+- [Streamlit App](https://insuranceapp-cteu6tsf77pwn2mynpatvv.streamlit.app/)  
+- [GitHub Repository (FastAPI)](https://github.com/vamsisaigarapati/insurance_renewal_fastapi)  
+- [GitHub Repository (Streamlit)](https://github.com/vamsisaigarapati/insurance_streamlit)
 
 ### Bachelor of Technology in Information Technology  
 **Andhra University, Visakhapatnam, India**  
