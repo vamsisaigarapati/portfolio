@@ -1,5 +1,6 @@
 # Insurance Renewal Prediction Project
 This project aims to predict whether an existing customer will renew their insurance plan or not. The process includes data exploration, machine learning experimentation, and deployment of the best-performing model.
+**Streamlit App** [Insurance Renewal prediction](https://insuranceapp-cteu6tsf77pwn2mynpatvv.streamlit.app/)
 
 ## Steps Involved
 
