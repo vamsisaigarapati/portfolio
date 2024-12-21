@@ -60,7 +60,7 @@ with mlflow.start_run():
 ------------------
 
 ----- stdout -----
-🏃 View run Experiment1-Basic- LogisticRegression at: https://dagshub.com/vamsisaigarapati/insurance_renewal.mlflow/#/experiments/1/runs/1acaa99f8b9d42e6a51a8a08f59b7d20
+🏃 View run Experiment1-Basic- LogisticRegression at: https://dagshub.com/vamsisaigarapati/insurance_renewal.mlflow/#/experiments/1/runs/3d1ae793b08d442299f5c3c67b3567bc
 🧪 View experiment at: https://dagshub.com/vamsisaigarapati/insurance_renewal.mlflow/#/experiments/1
 ------------------
 

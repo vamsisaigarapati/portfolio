@@ -1,7 +1,9 @@
 # EAS-503-Insurance Renewal Prediction Project
 This project aims to predict whether an existing customer will renew their insurance plan or not. The process includes data exploration, machine learning experimentation, and deployment of the best-performing model.
 
-**Links**:  
+[![alt text](thumbnail.png)](https://buffalo.app.box.com/file/1731855580208?s=wlrncijpznpb2keu3ahuifzr61jvsl5r)
+
+**Other Important Links**:  
 - **Streamlit App** [Insurance Renewal prediction](https://insuranceapp-cteu6tsf77pwn2mynpatvv.streamlit.app/)
 - **DagsHub:** [Experiments](https://dagshub.com/vamsisaigarapati/insurance_renewal/experiments)  
 - **DockerHub:** [Docker image](https://hub.docker.com/repository/docker/vamsisaigarapati/insurance_streamlit/general)  
