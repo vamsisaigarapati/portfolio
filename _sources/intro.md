@@ -1,6 +1,6 @@
 # Vamsi Sai Garapati
 
-![https://x.com/vamsi_garapati/header_photo](#)
+![Sample Image](_static/my_image.JPG)
 
 **Address:** 154 Merrimac St, Buffalo, New York, United States, 14214  
 **Email:** [vamsisaigarapati@gmail.com](mailto:vamsisaigarapati@gmail.com)  
