@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; My sample book</title>
+    <title>1. Insurance Renewal Prediction Project &#8212; My sample book</title>
   
   
   
@@ -63,7 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'eas503_project/details';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="3NF_form_of_insurance_dataset.html" />
+    <link rel="next" title="1.2. Normalizing Dataset" href="3NF_form_of_insurance_dataset.html" />
     <link rel="prev" title="Vamsi Sai Garapati" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -168,8 +168,11 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="eas-503-project.html">Predicting whether an Existing customer will renew their  insurance plan or not</a></li>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">1. Insurance Renewal Prediction Project</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3NF_form_of_insurance_dataset.html">1.2. Normalizing Dataset</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="eas-503-project.html">1.4. Predicting whether an Existing customer will renew their  insurance plan or not</a></li>
 
 
 
@@ -181,6 +184,8 @@
 
 
 
+</ul>
+</details></li>
 </ul>
 
     </div>
@@ -358,7 +363,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Insurance Renewal Prediction Project</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -367,9 +372,18 @@
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps-involved">1.1. Steps Involved</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-selection-and-acquisition">1.1.1. 1. Data Selection and Acquisition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preparation-and-exploration">1.1.2. 2. Data Preparation and Exploration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-experimentation">1.1.3. 3. Machine Learning Experimentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-deployment">1.1.4. 4. Model Deployment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-and-technologies-used">1.1.5. Tools and Technologies Used</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project-outcomes">1.1.6. Project Outcomes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#files-and-artifacts">1.1.7. Files and Artifacts</a></li>
 </ul>
-
+</li>
+</ul>
             </nav>
         </div>
     </div>
@@ -380,7 +394,104 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  
+  <section class="tex2jax_ignore mathjax_ignore" id="insurance-renewal-prediction-project">
+<h1><span class="section-number">1. </span>Insurance Renewal Prediction Project<a class="headerlink" href="#insurance-renewal-prediction-project" title="Link to this heading">#</a></h1>
+<p>This project aims to predict whether an existing customer will renew their insurance plan or not. The process includes data exploration, machine learning experimentation, and deployment of the best-performing model.</p>
+<section id="steps-involved">
+<h2><span class="section-number">1.1. </span>Steps Involved<a class="headerlink" href="#steps-involved" title="Link to this heading">#</a></h2>
+<section id="data-selection-and-acquisition">
+<h3><span class="section-number">1.1.1. </span>1. Data Selection and Acquisition<a class="headerlink" href="#data-selection-and-acquisition" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Dataset</strong>: Chose an insurance dataset containing features like age, premium, accommodation type, insurance type, etc., along with a target variable indicating renewal status.</p></li>
+<li><p><strong>Source</strong>: Retrieved the dataset from OpenML (Dataset ID: 45064) and stored it locally.</p></li>
+<li><p><strong>Database Integration</strong>: Leveraged a previously created normalized (3NF) database to fetch structured data using SQL queries.</p></li>
+</ul>
+</section>
+<section id="data-preparation-and-exploration">
+<h3><span class="section-number">1.1.2. </span>2. Data Preparation and Exploration<a class="headerlink" href="#data-preparation-and-exploration" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Data Extraction</strong>: Combined multiple tables (<code class="docutils literal notranslate"><span class="pre">FactInsurance</span></code>, <code class="docutils literal notranslate"><span class="pre">City</span></code>, <code class="docutils literal notranslate"><span class="pre">Accommodation</span></code>, <code class="docutils literal notranslate"><span class="pre">HealthIndicator</span></code>) using SQL joins to create a cohesive dataset.</p></li>
+<li><p><strong>Data Inspection</strong>:</p>
+<ul>
+<li><p>Checked for missing values and handled them appropriately.</p></li>
+<li><p>Analyzed feature distributions, identifying patterns and outliers.</p></li>
+<li><p>Explored relationships between features and the target variable using visualizations.</p></li>
+</ul>
+</li>
+<li><p><strong>Feature Transformation</strong>:</p>
+<ul>
+<li><p>Encoded categorical variables.</p></li>
+<li><p>Standardized numerical features where necessary.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="machine-learning-experimentation">
+<h3><span class="section-number">1.1.3. </span>3. Machine Learning Experimentation<a class="headerlink" href="#machine-learning-experimentation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Pipeline Development</strong>: Created reusable machine learning pipelines for streamlined experimentation.</p></li>
+<li><p><strong>Experiments Conducted</strong>:</p>
+<ol class="arabic simple">
+<li><p><strong>Logistic Regression</strong>: Baseline model to establish initial performance.</p></li>
+<li><p><strong>Random Forest</strong>: Improved performance and identified as the best-performing model.</p></li>
+<li><p><strong>Feature Engineering</strong>: Introduced new features based on domain knowledge to improve prediction accuracy.</p></li>
+<li><p><strong>Feature Selection</strong>: Reduced dimensionality by retaining only the most impactful features.</p></li>
+<li><p><strong>PCA Dimensionality Reduction</strong>: Applied Principal Component Analysis for further dimensionality reduction and noise elimination.</p></li>
+<li><p><strong>Feature Scaling</strong>: Normalized features to ensure consistent input for algorithms sensitive to feature magnitude.</p></li>
+<li><p><strong>Polynomial Features</strong>: Augmented feature space by generating interaction terms and polynomial terms.</p></li>
+</ol>
+</li>
+<li><p><strong>Metrics Tracking</strong>: Logged experiments and evaluated models using MLflow integrated with DagsHub.</p></li>
+<li><p><strong>Model Selection</strong>: Random Forest was identified as the best model based on metrics like accuracy, precision, recall, and F1 score.</p></li>
+</ul>
+</section>
+<section id="model-deployment">
+<h3><span class="section-number">1.1.4. </span>4. Model Deployment<a class="headerlink" href="#model-deployment" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Hosting</strong>:</p>
+<ul>
+<li><p>Packaged the Random Forest pipeline into a FastAPI application.</p></li>
+<li><p>Deployed the API on a cloud platform (DigitalOcean) to serve predictions.</p></li>
+</ul>
+</li>
+<li><p><strong>User Interface</strong>:</p>
+<ul>
+<li><p>Built a Streamlit web application to provide an interactive interface for users.</p></li>
+<li><p>Integrated the app with the deployed FastAPI endpoint to facilitate real-time predictions.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="tools-and-technologies-used">
+<h3><span class="section-number">1.1.5. </span>Tools and Technologies Used<a class="headerlink" href="#tools-and-technologies-used" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Data Handling</strong>: Python (pandas, SQLite3), SQL</p></li>
+<li><p><strong>Modeling and Logging</strong>: scikit-learn, MLflow, DagsHub</p></li>
+<li><p><strong>Deployment</strong>: FastAPI, Streamlit, DigitalOcean</p></li>
+</ul>
+</section>
+<section id="project-outcomes">
+<h3><span class="section-number">1.1.6. </span>Project Outcomes<a class="headerlink" href="#project-outcomes" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Successfully identified a robust machine learning pipeline for predicting insurance plan renewals.</p></li>
+<li><p>Deployed a scalable API and an intuitive web application for real-time predictions.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="files-and-artifacts">
+<h3><span class="section-number">1.1.7. </span>Files and Artifacts<a class="headerlink" href="#files-and-artifacts" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Notebook</strong>: Contains EDA, feature engineering, and model experimentation steps.</p></li>
+<li><p><strong>API</strong>: FastAPI implementation for serving predictions.</p></li>
+<li><p><strong>Web App</strong>: Streamlit code for user interaction.</p></li>
+<li><p><strong>Database</strong>: SQLite database for fetching and preparing data.</p></li>
+</ul>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -425,7 +536,7 @@
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title"><span class="section-number">1.2. </span>Normalizing Dataset</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -445,9 +556,18 @@
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps-involved">1.1. Steps Involved</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-selection-and-acquisition">1.1.1. 1. Data Selection and Acquisition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preparation-and-exploration">1.1.2. 2. Data Preparation and Exploration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-experimentation">1.1.3. 3. Machine Learning Experimentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-deployment">1.1.4. 4. Model Deployment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-and-technologies-used">1.1.5. Tools and Technologies Used</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project-outcomes">1.1.6. Project Outcomes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#files-and-artifacts">1.1.7. Files and Artifacts</a></li>
 </ul>
-
+</li>
+</ul>
   </nav></div>
 
 </div></div>
