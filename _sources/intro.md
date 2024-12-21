@@ -8,6 +8,7 @@
 **Phone:** +1 716-541-7019  
 **LinkedIn:** [vamsi-sai-garapati](https://www.linkedin.com/in/vamsi-sai-garapati/)  
 **Github:** [vamsisaigarapati](https://github.com/vamsisaigarapati/)  
+
 ---
 
 ## Summary
