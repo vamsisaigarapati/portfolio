@@ -3,7 +3,10 @@
 
 format: jb-book
 root: intro
+options:
+  numbered: true
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+- file: eas503_project/details
+  sections:
+  - file: eas503_project/3NF_form_of_insurance_dataset
+  - file: eas503_project/eas-503-project
