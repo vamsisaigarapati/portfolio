@@ -2,11 +2,13 @@
 
 ![Sample Image](_static/my_image.JPG)
 
+<span style="font-size: 0.9em;">
 **Address:** 154 Merrimac St, Buffalo, New York, United States, 14214  
 **Email:** [vamsisaigarapati@gmail.com](mailto:vamsisaigarapati@gmail.com)  
 **Phone:** +1 716-541-7019  
 **LinkedIn:** [vamsi-sai-garapati](https://www.linkedin.com/in/vamsi-sai-garapati/)  
 **Github:** [vamsisaigarapati](https://github.com/vamsisaigarapati)  
+</span>
 ---
 
 ## Summary
