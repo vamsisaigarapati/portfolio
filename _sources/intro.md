@@ -59,9 +59,11 @@ Seasoned Data Engineer with 4 years of experience designing and implementing rob
    - Developed a Streamlit app that connects to the pipeline and provides real-time predictions.
 
 **Links**:  
-- [Streamlit App](https://insuranceapp-cteu6tsf77pwn2mynpatvv.streamlit.app/)  
-- [GitHub Repository (FastAPI)](https://github.com/vamsisaigarapati/insurance_renewal_fastapi)  
-- [GitHub Repository (Streamlit)](https://github.com/vamsisaigarapati/insurance_streamlit)
+- **Streamlit App** [Insurance Renewal prediction](https://insuranceapp-cteu6tsf77pwn2mynpatvv.streamlit.app/)
+- **DagsHub:** [Experiments](https://dagshub.com/vamsisaigarapati/insurance_renewal/experiments)  
+- **DockerHub:** [Docker image](https://hub.docker.com/repository/docker/vamsisaigarapati/insurance_streamlit/general)  
+- **Final Deployed Model:** Random classifier Model
+- **Github:** [vamsisaigarapati](https://github.com/vamsisaigarapati/)  
 
 ### Bachelor of Technology in Information Technology  
 **Andhra University, Visakhapatnam, India**  
@@ -81,10 +83,10 @@ Seasoned Data Engineer with 4 years of experience designing and implementing rob
 
 ## Technical Skills
 
-- **Programming**: Python (PySpark, Pandas, NumPy, SciPy), SQL, R, MATLAB, Dart  
+- **Programming**: Python (PySpark, Pandas, Scikit-learn), SQL, R, MATLAB, Dart  
 - **Data Processing & Orchestration**: Databricks, Apache Spark, Apache Airflow, AWS-EMR, Informatica, Apache Hive, Kafka, Advanced Excel  
 - **Database Management**: Teradata, MySQL, SQLite3, MongoDB  
-- **Tools**: VS Code, Jupyter, Agile, Git, Jenkins, Docker, Tableau  
+- **Tools**: VS Code, Jupyter, Agile, Git, Jenkins, Docker, Tableau 
 
 ---
 

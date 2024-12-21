@@ -18,20 +18,60 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-insurance["Reco_Policy_Premium_cat"] = pd.cut(insurance["Reco_Policy_Premium"], bins=[ 0, 15000,25000,35000,50000, np.inf], labels=[1, 2, 3, 4, 5])
-insurance["Reco_Policy_Premium_cat"].value_counts().sort_index().plot.bar(rot=0, grid=True)
-plt.xlabel("Reco_Policy_Premium_category")
-plt.ylabel("Number of values")
-plt.show()
+import os
+import mlflow
+from mlflow.models import infer_signature
+from sklearn.metrics import accuracy_score, confusion_matrix
+
+# Set up MLFlow tracking URI and authentication
+MLFLOW_TRACKING_URI = "https://dagshub.com/vamsisaigarapati/insurance_renewal.mlflow"
+os.environ['MLFLOW_TRACKING_USERNAME'] = 'vamsisaigarapati'
+os.environ['MLFLOW_TRACKING_PASSWORD'] = '9a9f8cd0f5d6a9b86bfb91d57b6f708bf327ae6a'
+
+# Configure MLFlow
+mlflow.set_tracking_uri(uri=MLFLOW_TRACKING_URI)
+mlflow.set_experiment("insurance_renewal-eas501")
+
+
+with mlflow.start_run():
+    # Log the hyperparameters
+    mlflow.log_params(params)
+    mlflow.set_tag("mlflow.runName", f"Experiment1-Basic- LogisticRegression")
+    # Log metrics
+    mlflow.log_metric("f1-score", score)
+    mlflow.log_metric("accuracy", accuracy)
+    mlflow.log_metric("true_positives", tp)
+    mlflow.log_metric("true_negatives", tn)
+    mlflow.log_metric("false_positives", fp)
+    mlflow.log_metric("false_negatives", fn)
+
+    # Infer the model signature
+    signature = infer_signature(X_test, best_model.predict(X_test))
+
+    # Log the model
+    model_info = mlflow.sklearn.log_model(
+        sk_model=best_model,
+        artifact_path="insurance_renewal",
+        signature=signature,
+        input_example=X_test.iloc[:1],  # Provide one example input
+        registered_model_name="LogisticRegression-1",
+    )
+
 ------------------
 
+----- stdout -----
+🏃 View run Experiment1-Basic- LogisticRegression at: https://dagshub.com/vamsisaigarapati/insurance_renewal.mlflow/#/experiments/1/runs/6156bbcc73db4089ab66f1d98ffdd06f
+🧪 View experiment at: https://dagshub.com/vamsisaigarapati/insurance_renewal.mlflow/#/experiments/1
+------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn[10], line 1[0m
-[0;32m----> 1[0m insurance[[38;5;124m"[39m[38;5;124mReco_Policy_Premium_cat[39m[38;5;124m"[39m] [38;5;241m=[39m pd[38;5;241m.[39mcut(insurance[[38;5;124m"[39m[38;5;124mReco_Policy_Premium[39m[38;5;124m"[39m], bins[38;5;241m=[39m[ [38;5;241m0[39m, [38;5;241m15000[39m,[38;5;241m25000[39m,[38;5;241m35000[39m,[38;5;241m50000[39m, np[38;5;241m.[39minf], labels[38;5;241m=[39m[[38;5;241m1[39m, [38;5;241m2[39m, [38;5;241m3[39m, [38;5;241m4[39m, [38;5;241m5[39m])
-[1;32m      2[0m insurance[[38;5;124m"[39m[38;5;124mReco_Policy_Premium_cat[39m[38;5;124m"[39m][38;5;241m.[39mvalue_counts()[38;5;241m.[39msort_index()[38;5;241m.[39mplot[38;5;241m.[39mbar(rot[38;5;241m=[39m[38;5;241m0[39m, grid[38;5;241m=[39m[38;5;28;01mTrue[39;00m)
-[1;32m      3[0m plt[38;5;241m.[39mxlabel([38;5;124m"[39m[38;5;124mReco_Policy_Premium_category[39m[38;5;124m"[39m)
+Cell [0;32mIn[29], line 21[0m
+[1;32m     19[0m mlflow[38;5;241m.[39mset_tag([38;5;124m"[39m[38;5;124mmlflow.runName[39m[38;5;124m"[39m, [38;5;124mf[39m[38;5;124m"[39m[38;5;124mExperiment1-Basic- LogisticRegression[39m[38;5;124m"[39m)
+[1;32m     20[0m [38;5;66;03m# Log metrics[39;00m
+[0;32m---> 21[0m mlflow[38;5;241m.[39mlog_metric([38;5;124m"[39m[38;5;124mf1-score[39m[38;5;124m"[39m, score)
+[1;32m     22[0m mlflow[38;5;241m.[39mlog_metric([38;5;124m"[39m[38;5;124maccuracy[39m[38;5;124m"[39m, accuracy)
+[1;32m     23[0m mlflow[38;5;241m.[39mlog_metric([38;5;124m"[39m[38;5;124mtrue_positives[39m[38;5;124m"[39m, tp)
 
-[0;31mNameError[0m: name 'np' is not defined
+[0;31mNameError[0m: name 'score' is not defined
 
