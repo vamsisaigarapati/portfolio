@@ -1,0 +1,37 @@
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/opt/anaconda3/lib/python3.12/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/opt/anaconda3/lib/python3.12/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/anaconda3/lib/python3.12/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+insurance["Reco_Policy_Premium_cat"] = pd.cut(insurance["Reco_Policy_Premium"], bins=[ 0, 15000,25000,35000,50000, np.inf], labels=[1, 2, 3, 4, 5])
+insurance["Reco_Policy_Premium_cat"].value_counts().sort_index().plot.bar(rot=0, grid=True)
+plt.xlabel("Reco_Policy_Premium_category")
+plt.ylabel("Number of values")
+plt.show()
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+Cell [0;32mIn[10], line 1[0m
+[0;32m----> 1[0m insurance[[38;5;124m"[39m[38;5;124mReco_Policy_Premium_cat[39m[38;5;124m"[39m] [38;5;241m=[39m pd[38;5;241m.[39mcut(insurance[[38;5;124m"[39m[38;5;124mReco_Policy_Premium[39m[38;5;124m"[39m], bins[38;5;241m=[39m[ [38;5;241m0[39m, [38;5;241m15000[39m,[38;5;241m25000[39m,[38;5;241m35000[39m,[38;5;241m50000[39m, np[38;5;241m.[39minf], labels[38;5;241m=[39m[[38;5;241m1[39m, [38;5;241m2[39m, [38;5;241m3[39m, [38;5;241m4[39m, [38;5;241m5[39m])
+[1;32m      2[0m insurance[[38;5;124m"[39m[38;5;124mReco_Policy_Premium_cat[39m[38;5;124m"[39m][38;5;241m.[39mvalue_counts()[38;5;241m.[39msort_index()[38;5;241m.[39mplot[38;5;241m.[39mbar(rot[38;5;241m=[39m[38;5;241m0[39m, grid[38;5;241m=[39m[38;5;28;01mTrue[39;00m)
+[1;32m      3[0m plt[38;5;241m.[39mxlabel([38;5;124m"[39m[38;5;124mReco_Policy_Premium_category[39m[38;5;124m"[39m)
+
+[0;31mNameError[0m: name 'np' is not defined
+
