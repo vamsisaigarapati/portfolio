@@ -1,6 +1,6 @@
 # Vamsi Sai Garapati
 
-![Sample Image](_static/my_image.JPG)
+![Sample Image](_static/my_image.jpg)
 
 
 **Address:** 154 Merrimac St, Buffalo, New York, United States, 14214  
