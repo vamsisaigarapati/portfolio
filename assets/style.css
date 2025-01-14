@@ -1,0 +1,82 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header Styling */
+h1 {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #555;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+h3 {
+    font-size: 22px;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* Image Styling */
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+/* Link Styling */
+a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Bold Text */
+strong {
+    color: #444;
+}
+
+/* Contact Information */
+.contact-info {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Horizontal Line */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 40px 0;
+}
+
+/* List Styling */
+ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+/* Code Styling */
+code {
+    background-color: #f1f1f1;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: Consolas, 'Courier New', Courier, monospace;
+}
